@@ -34,7 +34,16 @@ public class ListaSequencial {
 
     //Método para ordenar livros
     public void sortBooks(){
-
+        for (int i = 0; i < tamanho - 1; i++) {
+            for (int j = i + 1; j < tamanho; j++) {
+                if (livros[i].titulo.compareTo(livros[j].titulo) > 0) {
+                    Livro temp = livros[i];
+                    livros[i] = livros[j];
+                    livros[j] = temp;
+                }
+            }
+        }
+        System.out.println("Livros ordenados com sucesso.");
     }
 
     //Método para buscar livro por título
