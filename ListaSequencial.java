@@ -39,6 +39,11 @@ public class ListaSequencial {
 
     //Método para buscar livro por título
     public Livro searchBookByTitle(String tituto){
+        for(int i = 0; i < tamanho; i++){
+            if (livros[i].titulo.equalsIgnoreCase(tituto)) {
+                return livros[i];
+            }
+        }
         return null;
     }
 }
